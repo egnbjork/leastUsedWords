@@ -27,8 +27,9 @@ public class TextProcessorTest {
 	public void getWords_singleWordString() throws IOException{
 		String singleWord= "test";
 		Reader sr = new StringReader(singleWord);
-
-		actual = TextProcessor.getWords(sr);
+		TextProcessor textProcessor = new TextProcessor();
+		
+		actual = textProcessor.getWords(sr);
 
 		expected.put(singleWord, 1);
 		assertEquals(expected,actual);
@@ -38,8 +39,9 @@ public class TextProcessorTest {
 	public void getWords_sentenceWithoutPunctuation() throws IOException{
 		String singleWord= "He skipped";
 		Reader sr = new StringReader(singleWord);
-
-		actual = TextProcessor.getWords(sr);
+		TextProcessor textProcessor = new TextProcessor();
+		
+		actual = textProcessor.getWords(sr);
 
 		expected.put("he", 1);
 		expected.put("skipped", 1);
@@ -50,8 +52,9 @@ public class TextProcessorTest {
 	public void getWords_sentenceWithPunctuation() throws IOException{
 		String singleWord= "He skipped";
 		Reader sr = new StringReader(singleWord);
-
-		actual = TextProcessor.getWords(sr);
+		TextProcessor textProcessor = new TextProcessor();
+		
+		actual = textProcessor.getWords(sr);
 
 		expected.put("he", 1);
 		expected.put("skipped", 1);
@@ -62,8 +65,9 @@ public class TextProcessorTest {
 	public void getWords_twoSameWords() throws IOException{
 		String singleWord= "Skipped skipped";
 		Reader sr = new StringReader(singleWord);
-
-		actual = TextProcessor.getWords(sr);
+		TextProcessor textProcessor = new TextProcessor();
+		
+		actual = textProcessor.getWords(sr);
 
 		expected.put("skipped", 2);
 		assertEquals(expected,actual);
