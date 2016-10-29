@@ -23,7 +23,7 @@ public class LeastUsedWordsFinderTest {
 
 		List<String> actual = finder.topLongestLeastUsed(null);
 		
-		assertEquals(null,null);
+		assertEquals(null,actual);
 	}
 	
 	@Test
