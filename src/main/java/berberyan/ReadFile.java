@@ -6,6 +6,8 @@ import java.io.Reader;
 
 public class ReadFile{
 
+	private ReadFile() {}
+	
 	public static Reader fileToReader(String path) throws FileNotFoundException{
 		return new FileReader(path);
 	}

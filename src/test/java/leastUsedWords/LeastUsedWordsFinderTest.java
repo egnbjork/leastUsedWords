@@ -4,6 +4,7 @@ import static org.junit.Assert.assertEquals;
 
 import java.io.IOException;
 import java.io.StringReader;
+import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
@@ -23,7 +24,7 @@ public class LeastUsedWordsFinderTest {
 
 		List<String> actual = finder.topLongestLeastUsed(null);
 		
-		assertEquals(null,actual);
+		assertEquals(new ArrayList<String>(),actual);
 	}
 	
 	@Test
